@@ -1,12 +1,12 @@
 # MutiMQ
 
-Wrapper for using different message queue systems, such as: zeromq, axon and hypermq.  
+Wrapper for using different message queue systems, such as: [zeromq](https://github.com/JustinTulloss/zeromq.node), [axon](https://github.com/visionmedia/axon) and [hypermq](https://github.com/kurunt/hypermq).  
 
 Allows use of multiple message queueing systems within this single module, providing a universal set of common commands. Message queues supported:  
 
-  - zmq (zeromq), @2.7.0
-  - axon, @2.0.0
-  - hypermq, @0.0.3  
+  - [zeromq](https://github.com/JustinTulloss/zeromq.node) (zeromq), @2.7.0
+  - [axon](https://github.com/visionmedia/axon), @2.0.0
+  - [hypermq](https://github.com/kurunt/hypermq), @0.0.3  
 
 ## Installation
 
