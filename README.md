@@ -4,7 +4,7 @@ Wrapper for using different message queue systems, such as: [zeromq](https://git
 
 Allows use of multiple message queueing systems within this single module, providing a universal set of common commands. Message queues supported:  
 
-  - [zeromq](https://github.com/JustinTulloss/zeromq.node) (zeromq), @2.7.0
+  - [zmq](https://github.com/JustinTulloss/zeromq.node), @2.7.0
   - [axon](https://github.com/visionmedia/axon), @2.0.0
   - [hypermq](https://github.com/kurunt/hypermq), @0.0.3  
 
@@ -52,6 +52,7 @@ npm install zmq
 
 ```js
 var multimq = require('multimq');
+var service = multimq.service();
 
 var options = {
   service: 'myService',
@@ -67,7 +68,7 @@ var options = {
   protocol: 'amp'
 };
 
-var myService = new multimq(options);
+var myService = new service(options);
 console.log('MQ push service bound at: tcp://localhost:5555');
 
 setInterval(function(){
@@ -80,6 +81,7 @@ setInterval(function(){
 
 ```js
 var multimq = require('multimq');
+var service = multimq.service();
 
 var options = {
   service: 'myService',
@@ -94,7 +96,7 @@ var options = {
   rejectUnauthorized: false
 };
 
-var myService = new multimq(options);
+var myService = new service(options);
 console.log('MQ pull service connected to: tcp://localhost:5555');
 
 myService.on('message', function(msg){
